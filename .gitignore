@@ -1,0 +1,13 @@
+# macOS
+.DS_Store
+
+# Python local server artifacts
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log

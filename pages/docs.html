@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PatchPilot Docs | Quick Start</title>
+  <meta name="description" content="Quick-start guide for PatchPilot: run local site, understand project files, and prepare for GitHub Pages deployment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-page="docs">
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+
+  <header class="topbar wrap">
+    <a href="../index.html" class="brand">PatchPilot</a>
+    <nav class="nav">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="demo.html" data-nav="demo">Live Demo</a>
+      <a href="how-it-works.html" data-nav="how">How It Works</a>
+      <a href="opensource.html" data-nav="oss">Open Source</a>
+      <a href="docs.html" data-nav="docs">Docs</a>
+    </nav>
+    <a href="demo.html" class="ghost-btn">Watch Demo</a>
+  </header>
+
+  <main class="wrap">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Documentation</p>
+      <h1>Run it locally and publish to GitHub Pages.</h1>
+      <p class="sub">Use this quick reference to demo PatchPilot and deploy a polished multi-page product website publicly.</p>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>Local Run</h2>
+      </div>
+      <div class="code-block">
+<pre><code>cd /Users/akankshgatla/Downloads/terminal-agent-mvp-site
+python3 -m http.server 8080
+# open http://localhost:8080</code></pre>
+      </div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>Project Pages</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <h3>Home</h3>
+          <p>Positioning, reliability snapshot, and links into deeper pages.</p>
+        </article>
+        <article>
+          <h3>Live Demo</h3>
+          <p>Animated prototype showing failure, fix recommendation, and successful retry.</p>
+        </article>
+        <article>
+          <h3>How It Works</h3>
+          <p>Architecture, module details, and safety-first operational model.</p>
+        </article>
+        <article>
+          <h3>Open Source</h3>
+          <p>Milestones, contribution pathways, and community-led direction.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>GitHub Pages Checklist</h2>
+      </div>
+      <ol class="flow-list">
+        <li><strong>Repository root:</strong> keep HTML files at project root with asset paths like assets/styles.css.</li>
+        <li><strong>Branch:</strong> push to main branch and ensure static files are committed.</li>
+        <li><strong>Pages settings:</strong> in GitHub, set Pages source to Deploy from branch and choose main and root.</li>
+        <li><strong>Verify links:</strong> confirm navigation works for every page after deployment.</li>
+        <li><strong>Custom domain:</strong> optional, add CNAME once base site is stable.</li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>PatchPilot docs: simple local run and clean GitHub Pages deployment.</p>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

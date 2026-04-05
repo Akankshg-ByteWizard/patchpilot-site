@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PatchPilot Live Demo | Terminal Fix Engine</title>
+  <meta name="description" content="Watch PatchPilot simulate failure capture, reasoning, approval, and automatic command retry in a terminal-style prototype." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-page="demo">
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+
+  <header class="topbar wrap">
+    <a href="../index.html" class="brand">PatchPilot</a>
+    <nav class="nav">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="demo.html" data-nav="demo">Live Demo</a>
+      <a href="how-it-works.html" data-nav="how">How It Works</a>
+      <a href="opensource.html" data-nav="oss">Open Source</a>
+      <a href="docs.html" data-nav="docs">Docs</a>
+    </nav>
+    <a href="docs.html" class="ghost-btn">Install</a>
+  </header>
+
+  <main class="wrap">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Prototype Walkthrough</p>
+      <h1>See the terminal fix loop happen step-by-step.</h1>
+      <p class="sub">This simulation reproduces the same flow users experience: failure capture, context retrieval, suggestion, approval, apply, retry.</p>
+      <div class="hero-actions">
+        <button type="button" class="cta-btn" id="runScenarioBtn">Run Scenario</button>
+        <button type="button" class="ghost-btn" id="toggleAutoBtn">Auto Run: On</button>
+      </div>
+    </section>
+
+    <section class="panel reveal demo-layout">
+      <article>
+        <h2>Terminal Playback</h2>
+        <div class="terminal-proto" id="prototypeTerminal"></div>
+      </article>
+      <article>
+        <h2>Fix Pipeline States</h2>
+        <ol class="step-list" id="stepList">
+          <li>Capture terminal failure</li>
+          <li>Read surrounding code context</li>
+          <li>Retrieve similar successful fixes</li>
+          <li>Generate safe recommendation</li>
+          <li>Ask user for approval</li>
+          <li>Apply fix and retry original command</li>
+        </ol>
+      </article>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>Demo Reliability Snapshot</h2>
+        <p>Metrics update continuously while the scenario runs.</p>
+      </div>
+      <div class="metric-grid" id="metricGrid"></div>
+      <div class="stream" id="eventStream"></div>
+      <button class="ghost-btn refresh" id="refreshBtn" type="button">Refresh Snapshot</button>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>PatchPilot - Live prototype for terminal-native error recovery.</p>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

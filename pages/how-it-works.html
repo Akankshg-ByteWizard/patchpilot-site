@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How PatchPilot Works | Architecture and Safety</title>
+  <meta name="description" content="Learn the architecture behind PatchPilot: shell hooks, context collector, memory retrieval, agent reasoning, and approval-first patch application." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-page="how">
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+
+  <header class="topbar wrap">
+    <a href="../index.html" class="brand">PatchPilot</a>
+    <nav class="nav">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="demo.html" data-nav="demo">Live Demo</a>
+      <a href="how-it-works.html" data-nav="how">How It Works</a>
+      <a href="opensource.html" data-nav="oss">Open Source</a>
+      <a href="docs.html" data-nav="docs">Docs</a>
+    </nav>
+    <a href="opensource.html" class="ghost-btn">Contribute</a>
+  </header>
+
+  <main class="wrap">
+    <section class="page-hero reveal">
+      <p class="eyebrow">System Design</p>
+      <h1>A practical architecture for fixing terminal failures fast.</h1>
+      <p class="sub">PatchPilot combines shell integration, contextual retrieval, memory, and strict approval gates to keep fixes accurate and safe.</p>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>End-to-End Flow</h2>
+        <p>From command failure to successful retry.</p>
+      </div>
+      <ol class="flow-list">
+        <li><strong>Hook:</strong> shell trap catches non-zero exit and command details.</li>
+        <li><strong>Context:</strong> daemon reads error output and relevant file window.</li>
+        <li><strong>Memory:</strong> vector search returns top similar successful incidents.</li>
+        <li><strong>Reasoning:</strong> fix agent proposes shell command and or diff patch.</li>
+        <li><strong>Approval:</strong> user confirms, with strict auto-approval rules.</li>
+        <li><strong>Write-back:</strong> successful fix is logged and promoted into memory.</li>
+      </ol>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>Core Modules</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <h3>Shell Hook Layer</h3>
+          <p>Bash, zsh, and fish hooks emit structured payloads to a daemon socket.</p>
+        </article>
+        <article>
+          <h3>Context Collector</h3>
+          <p>Extracts language, error type, and nearest code region for grounding.</p>
+        </article>
+        <article>
+          <h3>Prompt Builder</h3>
+          <p>Injects relevant few-shot examples from prior successful fixes.</p>
+        </article>
+        <article>
+          <h3>Approval Gate</h3>
+          <p>Prevents silent destructive edits; every patch request is explicit.</p>
+        </article>
+        <article>
+          <h3>Patcher and Runner</h3>
+          <p>Applies backup-safe edits, runs commands, and retries failed workflows.</p>
+        </article>
+        <article>
+          <h3>Session Logger</h3>
+          <p>Tracks outcome, confidence, and metadata for audits and training loops.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>Safety Principles</h2>
+      </div>
+      <div class="safety-grid">
+        <article>
+          <h3>Approval First</h3>
+          <p>File patches never run silently. Users must explicitly approve edits.</p>
+        </article>
+        <article>
+          <h3>Backup Before Modify</h3>
+          <p>Any changed file is copied to a backup before patching.</p>
+        </article>
+        <article>
+          <h3>Policy Boundaries</h3>
+          <p>Ignored sensitive paths and command allow-lists reduce accidental risk.</p>
+        </article>
+        <article>
+          <h3>Transparent Feedback</h3>
+          <p>Every recommendation includes confidence and reason, never opaque actions.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>PatchPilot architecture: practical, transparent, and approval-first.</p>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

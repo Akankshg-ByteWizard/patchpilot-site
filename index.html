@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PatchPilot | Open Source AI Fix Engineer for Terminal Errors</title>
+  <meta name="description" content="PatchPilot is an open source AI fix engineer that watches terminal failures and proposes safe, explainable fixes in seconds." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body data-page="home">
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+
+  <header class="topbar wrap">
+    <a href="index.html" class="brand">PatchPilot</a>
+    <nav class="nav">
+      <a href="index.html" data-nav="home">Home</a>
+      <a href="pages/demo.html" data-nav="demo">Live Demo</a>
+      <a href="pages/how-it-works.html" data-nav="how">How It Works</a>
+      <a href="pages/opensource.html" data-nav="oss">Open Source</a>
+      <a href="pages/docs.html" data-nav="docs">Docs</a>
+    </nav>
+    <a href="pages/demo.html" class="ghost-btn">Try Prototype</a>
+  </header>
+
+  <main class="wrap">
+    <section class="hero reveal">
+      <p class="eyebrow">Open Source. Terminal Native. Built for velocity.</p>
+      <h1>Every command failure becomes a fix in motion.</h1>
+      <p class="sub">
+        PatchPilot listens to failed terminal commands, understands context, and proposes safe fixes with transparent approvals.
+        No context switching. No black box. Just fast recovery and a smarter command line.
+      </p>
+
+      <div class="hero-actions">
+        <a href="pages/demo.html" class="cta-btn">Watch The Fix Engine</a>
+        <a href="pages/opensource.html" class="ghost-link">Explore Open Source Plan</a>
+      </div>
+
+      <div class="hero-chips">
+        <span>Works with bash, zsh, fish</span>
+        <span>Unified patch + command suggestions</span>
+        <span>Approval-first safety model</span>
+        <span>Memory-backed repeated fix acceleration</span>
+      </div>
+
+      <div class="terminal-demo" id="terminalDemo">
+        <p>$ python app.py</p>
+        <p class="err">ModuleNotFoundError: No module named 'fastapi'</p>
+        <p class="ok">Suggestion: pip install fastapi</p>
+      </div>
+    </section>
+
+    <section class="trust-bar reveal">
+      <p>Designed for engineering teams that treat reliability as a feature</p>
+      <div class="trust-logos">
+        <span>DevTools Labs</span>
+        <span>CloudForge</span>
+        <span>CodeScale</span>
+        <span>TerminalOps</span>
+      </div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>What Makes It Different</h2>
+        <p>PatchPilot is not a chatbot wrapper. It is an execution-aware fix loop.</p>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <h3>Real-time Error Capture</h3>
+          <p>Interprets non-zero exits and grabs immediate execution context.</p>
+        </article>
+        <article>
+          <h3>Guided Repair Decisions</h3>
+          <p>Shows shell command fixes and patch diffs with confidence and rationale.</p>
+        </article>
+        <article>
+          <h3>Memory of What Worked</h3>
+          <p>Reuses successful fixes to improve speed and consistency over time.</p>
+        </article>
+      </div>
+      <div class="hero-actions top-gap">
+        <a href="pages/how-it-works.html" class="ghost-btn">See Full Pipeline</a>
+        <a href="pages/docs.html" class="ghost-link">Read Setup Guide</a>
+      </div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>Live Reliability Snapshot</h2>
+        <p>Demo telemetry from synthetic sessions to illustrate throughput and trust signals.</p>
+      </div>
+      <div class="metric-grid" id="metricGrid"></div>
+      <div class="stream" id="eventStream"></div>
+      <button class="ghost-btn refresh" id="refreshBtn" type="button">Refresh Snapshot</button>
+    </section>
+
+    <section class="cta-panel reveal">
+      <h2>Build this with us in public.</h2>
+      <p>The first release is open source first. Join the roadmap, contribute fixes, and help shape the terminal-native AI developer workflow.</p>
+      <div class="hero-actions">
+        <a href="pages/opensource.html" class="cta-btn">Join Open Source</a>
+        <a href="pages/docs.html" class="ghost-link">Start Installing</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>PatchPilot - Open source AI Fix Engineer for modern terminal workflows.</p>
+  </footer>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

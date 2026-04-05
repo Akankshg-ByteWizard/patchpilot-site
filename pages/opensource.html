@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PatchPilot Open Source | Roadmap and Community</title>
+  <meta name="description" content="PatchPilot is open source first. Explore roadmap milestones, contribution paths, and community priorities." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-page="oss">
+  <div class="bg-glow bg-glow-a"></div>
+  <div class="bg-glow bg-glow-b"></div>
+
+  <header class="topbar wrap">
+    <a href="../index.html" class="brand">PatchPilot</a>
+    <nav class="nav">
+      <a href="../index.html" data-nav="home">Home</a>
+      <a href="demo.html" data-nav="demo">Live Demo</a>
+      <a href="how-it-works.html" data-nav="how">How It Works</a>
+      <a href="opensource.html" data-nav="oss">Open Source</a>
+      <a href="docs.html" data-nav="docs">Docs</a>
+    </nav>
+    <a href="docs.html" class="ghost-btn">Get Started</a>
+  </header>
+
+  <main class="wrap">
+    <section class="page-hero reveal">
+      <p class="eyebrow">Open Source First</p>
+      <h1>No pricing wall. Build it in public.</h1>
+      <p class="sub">PatchPilot begins as an open-source project with transparent milestones, contributor-friendly modules, and practical documentation.</p>
+      <div class="hero-actions">
+        <a href="#" class="cta-btn">Star on GitHub</a>
+        <a href="docs.html" class="ghost-link">Read Contribution Setup</a>
+      </div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>Roadmap by Milestone</h2>
+      </div>
+      <div class="roadmap-grid">
+        <article>
+          <h3>Milestone 1: Working Hook + Daemon</h3>
+          <p>Capture failed commands and persist structured sessions locally.</p>
+        </article>
+        <article>
+          <h3>Milestone 2: Reliable Fix Proposals</h3>
+          <p>Generate patch and command recommendations with confidence scores.</p>
+        </article>
+        <article>
+          <h3>Milestone 3: Memory Layer</h3>
+          <p>Add vector retrieval and write-back from successful sessions.</p>
+        </article>
+        <article>
+          <h3>Milestone 4: Agentic Reasoning</h3>
+          <p>Enable tool-using multi-step flows for cascading failure recovery.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>Ways to Contribute</h2>
+      </div>
+      <div class="feature-grid">
+        <article>
+          <h3>Core Python Modules</h3>
+          <p>Improve context parsing, approval logic, and patching reliability.</p>
+        </article>
+        <article>
+          <h3>Shell Integrations</h3>
+          <p>Extend hooks, improve edge-case handling, and add observability.</p>
+        </article>
+        <article>
+          <h3>UI and Docs</h3>
+          <p>Refine demos, tutorials, examples, and onboarding for new users.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel reveal">
+      <div class="section-head">
+        <h2>Community FAQ</h2>
+      </div>
+      <div class="faq-list">
+        <details>
+          <summary>Will this remain open source?</summary>
+          <p>Yes. The initial roadmap and core engine are planned to stay open and community driven.</p>
+        </details>
+        <details>
+          <summary>Can contributors own modules?</summary>
+          <p>Yes. Maintainers can take ownership areas such as shell hooks, agent tools, or memory.</p>
+        </details>
+        <details>
+          <summary>Is local-only mode supported?</summary>
+          <p>Yes. Local inference endpoints and local storage are first-class workflows.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footer">
+    <p>PatchPilot open-source roadmap: shipping in public from day one.</p>
+  </footer>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
