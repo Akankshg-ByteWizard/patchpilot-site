@@ -29,8 +29,13 @@
   <main class="wrap">
     <section class="page-hero reveal">
       <p class="eyebrow">System Design</p>
-      <h1>A practical architecture for fixing terminal failures fast.</h1>
-      <p class="sub">PatchPilot combines shell integration, contextual retrieval, memory, and strict approval gates to keep fixes accurate and safe.</p>
+      <h1>Architecture built for speed, safety, and repeatability.</h1>
+      <p class="sub">PatchPilot combines shell integration, contextual retrieval, memory, and approval gates so terminal recovery feels fast without losing control.</p>
+      <div class="pill-row">
+        <span>Low-latency context capture</span>
+        <span>Memory-backed recommendation engine</span>
+        <span>Approval-first write pipeline</span>
+      </div>
     </section>
 
     <section class="panel reveal">
@@ -51,6 +56,7 @@
     <section class="panel reveal">
       <div class="section-head">
         <h2>Core Modules</h2>
+        <p>Each module is isolated so contributors can improve reliability without breaking the full pipeline.</p>
       </div>
       <div class="feature-grid">
         <article>
@@ -83,6 +89,7 @@
     <section class="panel reveal">
       <div class="section-head">
         <h2>Safety Principles</h2>
+        <p>The default behavior is conservative by design: suggest clearly, execute deliberately, and always preserve rollback paths.</p>
       </div>
       <div class="safety-grid">
         <article>

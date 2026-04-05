@@ -14,6 +14,10 @@
   <div class="bg-glow bg-glow-a"></div>
   <div class="bg-glow bg-glow-b"></div>
 
+  <div class="launch-strip wrap">
+    <span><strong>Launch Wave:</strong> Open-source preview now live with terminal-first error recovery.</span>
+  </div>
+
   <header class="topbar wrap">
     <a href="index.html" class="brand">PatchPilot</a>
     <nav class="nav">
@@ -28,29 +32,46 @@
 
   <main class="wrap">
     <section class="hero reveal">
-      <p class="eyebrow">Open Source. Terminal Native. Built for velocity.</p>
-      <h1>Every command failure becomes a fix in motion.</h1>
-      <p class="sub">
-        PatchPilot listens to failed terminal commands, understands context, and proposes safe fixes with transparent approvals.
-        No context switching. No black box. Just fast recovery and a smarter command line.
-      </p>
+      <div class="hero-grid">
+        <article>
+          <p class="eyebrow">Open Source. Terminal Native. Built for velocity.</p>
+          <h1>Every failed command becomes a guided, auditable fix.</h1>
+          <p class="sub">
+            PatchPilot watches terminal failures in real time, reasons with context, and proposes safe command or patch fixes.
+            No tab hopping. No black-box automation. Just faster recovery with approvals at every critical step.
+          </p>
 
-      <div class="hero-actions">
-        <a href="pages/demo.html" class="cta-btn">Watch The Fix Engine</a>
-        <a href="pages/opensource.html" class="ghost-link">Explore Open Source Plan</a>
-      </div>
+          <div class="hero-actions">
+            <a href="pages/demo.html" class="cta-btn">Watch The Fix Engine</a>
+            <a href="pages/opensource.html" class="ghost-link">Explore Open Source Plan</a>
+          </div>
 
-      <div class="hero-chips">
-        <span>Works with bash, zsh, fish</span>
-        <span>Unified patch + command suggestions</span>
-        <span>Approval-first safety model</span>
-        <span>Memory-backed repeated fix acceleration</span>
-      </div>
+          <div class="pill-row">
+            <span>Works with bash, zsh, fish</span>
+            <span>Patch + command recommendations</span>
+            <span>Approval-first safety model</span>
+            <span>Memory-backed repeated fix acceleration</span>
+          </div>
 
-      <div class="terminal-demo" id="terminalDemo">
-        <p>$ python app.py</p>
-        <p class="err">ModuleNotFoundError: No module named 'fastapi'</p>
-        <p class="ok">Suggestion: pip install fastapi</p>
+          <div class="kpi-row">
+            <div class="kpi"><strong>88%</strong><span>Fix success in demo sessions</span></div>
+            <div class="kpi"><strong>1.2s</strong><span>Median recommendation latency</span></div>
+            <div class="kpi"><strong>72%</strong><span>Memory hit rate on repeat errors</span></div>
+          </div>
+        </article>
+
+        <aside class="hero-panel">
+          <p class="section-kicker">Terminal Playback</p>
+          <h3>Failure -> Reasoning -> Safe Retry</h3>
+          <div class="terminal-demo" id="terminalDemo">
+            <p>$ python app.py</p>
+            <p class="err">ModuleNotFoundError: No module named 'fastapi'</p>
+            <p class="ok">Suggestion: pip install fastapi</p>
+          </div>
+          <div class="callout">
+            PatchPilot only applies edits after explicit confirmation and keeps backups before any write.
+          </div>
+        </aside>
       </div>
     </section>
 
@@ -87,6 +108,19 @@
         <a href="pages/how-it-works.html" class="ghost-btn">See Full Pipeline</a>
         <a href="pages/docs.html" class="ghost-link">Read Setup Guide</a>
       </div>
+    </section>
+
+    <section class="panel reveal split-panel">
+      <article>
+        <p class="section-kicker">For Engineering Teams</p>
+        <h3>Keep developers in flow, not in debugging loops.</h3>
+        <p class="sub">PatchPilot reduces context switching during incidents by handling triage, recommendation, and retry directly in terminal workflows.</p>
+      </article>
+      <article>
+        <p class="section-kicker">For Reliability Culture</p>
+        <h3>Capture what worked and improve with every fix.</h3>
+        <p class="sub">Successful patches become reusable memory, helping teams resolve recurring failure classes with higher confidence over time.</p>
+      </article>
     </section>
 
     <section class="panel reveal">

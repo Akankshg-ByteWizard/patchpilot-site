@@ -1,57 +1,42 @@
-# PatchPilot Product Website
+# PatchPilot
 
-An open-source-first, multi-page product website for the Terminal AI Error Agent concept.
+PatchPilot is an open-source, terminal-native AI agent that turns command failures into safe, explainable fixes.
 
-## Pages
+## Product Vision
 
-- `index.html`: Homepage, positioning, trust, and reliability snapshot
-- `pages/demo.html`: Interactive terminal prototype animation (failure -> fix -> retry)
-- `pages/how-it-works.html`: Architecture flow and safety principles
-- `pages/opensource.html`: Open-source roadmap and contribution direction
-- `pages/docs.html`: Quick-start docs and GitHub Pages checklist
+PatchPilot helps developers recover from errors without leaving the terminal:
 
-## Run locally
+- Captures failed commands and execution context in real time.
+- Suggests shell commands and patch diffs with clear reasoning.
+- Requires explicit approval before impactful changes.
+- Learns from successful fixes to resolve repeated incidents faster.
+
+## Core Value
+
+- Faster debugging loops for individual developers and teams.
+- Safer automation through approval-first workflows.
+- Open-source development model with transparent roadmap and contribution paths.
+
+## Product Site Sections
+
+- Home: Positioning, trust signals, and product snapshot.
+- Live Demo: Interactive failure -> fix -> retry simulation.
+- How It Works: Architecture, modules, and safety model.
+- Open Source: Milestones, ownership areas, and community direction.
+- Docs: Local preview and deployment workflow guidance.
+
+## Local Preview
 
 ```bash
-cd /Users/akankshgatla/Downloads/terminal-agent-mvp-site
 python3 -m http.server 8080
 ```
 
-Open:
+Then open http://localhost:8080.
 
-- http://localhost:8080
+## Contributing
 
-## GitHub Pages Deployment
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-1. Push this folder to the root of your GitHub repository.
-2. In repository settings, open Pages.
-3. Set Source to `Deploy from a branch`.
-4. Select `main` branch and `/ (root)` folder.
-5. Save, then wait for GitHub Pages build and verify all page navigation links.
+## License
 
-## Assets
-
-- `assets/css/styles.css`: Shared visual design and responsive rules for all pages
-- `assets/js/app.js`: Navigation state, metrics simulation, and demo prototype animation
-
-## Repository Structure
-
-```text
-.
-├── .github/workflows/deploy-pages.yml
-├── assets/
-│   ├── css/styles.css
-│   ├── js/app.js
-│   └── images/
-├── docs/
-│   └── terminal-agent-spec.md
-├── pages/
-│   ├── demo.html
-│   ├── docs.html
-│   ├── how-it-works.html
-│   └── opensource.html
-├── CONTRIBUTING.md
-├── LICENSE
-├── README.md
-└── index.html
-```
+[MIT](LICENSE)

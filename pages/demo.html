@@ -28,12 +28,17 @@
 
   <main class="wrap">
     <section class="page-hero reveal">
-      <p class="eyebrow">Prototype Walkthrough</p>
-      <h1>See the terminal fix loop happen step-by-step.</h1>
-      <p class="sub">This simulation reproduces the same flow users experience: failure capture, context retrieval, suggestion, approval, apply, retry.</p>
+      <p class="eyebrow">Interactive Product Demo</p>
+      <h1>A real-world terminal incident, resolved in one guided loop.</h1>
+      <p class="sub">Run the simulation to see how PatchPilot captures errors, reasons over context, requests approval, applies a fix, and retries instantly.</p>
       <div class="hero-actions">
         <button type="button" class="cta-btn" id="runScenarioBtn">Run Scenario</button>
         <button type="button" class="ghost-btn" id="toggleAutoBtn">Auto Run: On</button>
+      </div>
+      <div class="pill-row">
+        <span>Explainable fix recommendations</span>
+        <span>Human approval checkpoint</span>
+        <span>Patch + command execution modes</span>
       </div>
     </section>
 
@@ -57,8 +62,8 @@
 
     <section class="panel reveal">
       <div class="section-head">
-        <h2>Demo Reliability Snapshot</h2>
-        <p>Metrics update continuously while the scenario runs.</p>
+        <h2>Reliability Snapshot During Playback</h2>
+        <p>These synthetic metrics mirror the trust and performance signals teams monitor in production.</p>
       </div>
       <div class="metric-grid" id="metricGrid"></div>
       <div class="stream" id="eventStream"></div>
